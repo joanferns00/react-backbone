@@ -1,3 +1,8 @@
+
+//import Header from './views';
+var Header = require("./views/Header");
+var Footer = require("./views/Footer");
+
 var AppRouter = Backbone.Router.extend({
     routes: {
         'nowplaying': 'nowplaying',
@@ -6,11 +11,19 @@ var AppRouter = Backbone.Router.extend({
     }
 });
 
+
+
 var initialize = function () {
     var appRouter = new AppRouter;
 
-    appRouter.on('route:home', function () {
+    appRouter.on('route:home', function () {        
+        /*var view = new Header();
+        $('#app').html(view.render().$el);*/
+        var header = new Header();
+        var footer = new Footer();        
+        header.render();        
         $('#content').text("Home Screen");
+        footer.render();         
     });
 
     appRouter.on('route:schedule', function () {

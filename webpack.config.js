@@ -10,10 +10,10 @@ const paths = {
 
 module.exports = {
     entry: './main.js',
-  output: {
-    path: paths.DIST,
-    filename: 'output.js',
-  },
+    output: {
+      path: paths.DIST,
+      filename: 'output.js',
+    },
     module: {
         loaders: [
             {test: /\.css$/, loader: "style-loader!css-loader"},
