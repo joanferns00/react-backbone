@@ -1,3 +1,5 @@
+import $ from 'jquery'
+import Backbone from 'backbone';
 var Header = Backbone.View.extend({
     el: '#header',
      render: function() {

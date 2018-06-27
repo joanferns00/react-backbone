@@ -1,4 +1,7 @@
 
+import $ from 'jquery'
+import Backbone from 'backbone';
+
 //import Header from './views';
 var Header = require("./views/Header");
 var Footer = require("./views/Footer");
